@@ -17,7 +17,7 @@ Design a Twitter-like social network website for making posts and following user
 
 * Python
 * Django
-* SQlite
+* SQLite
 * JS
 * HTML
 * CSS
