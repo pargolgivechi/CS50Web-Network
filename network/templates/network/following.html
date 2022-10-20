@@ -1,0 +1,23 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="container-fluid mb-4">
+        <div class="center-align display-4 mt-4 mb-5">Your Followings Posts</div>
+        <div class="col-7 light-green lighten-4 p-4 m-auto">
+            <br/>
+            <br/>
+            {% for following_post in following_posts %}
+                <div class="col-md-9 p-5 card mb-5 z-depth-3" style="margin: auto;">
+                    <a class="mt-3 h4" href="{% url 'users_profile' following_post.user.id %}">{{ following_post.user }}</a>
+                    <div data-id="{{following_post.id}}" class="{% if following_post.user_likes > 0 %} fas {%else%} far {% endif %} fa-heart align-self-end" style="color: red;">&nbsp
+                        <span class="left_side counter text-muted">{{ following_post.like_num }}</span>
+                    </div>
+                    <div id="change{{ following_post.id }}" >
+                        <p class="display-5">{{ following_post.text }}</p>
+                    </div>
+                    <p class="text-muted mt-4 mb-5">{{ following_post.date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

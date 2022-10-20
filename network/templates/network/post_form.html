@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+    <div class="mb-3 mt-3">
+        <p class="center-align display-4 mb-4">Create New Post</p>
+        <form class="m-auto form-group col-4 mt-3 mb-5" action ="" method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn amber accent-4 btn-small" name="post" type="submit">Post</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+{%endif%}
