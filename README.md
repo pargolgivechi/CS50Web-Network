@@ -1,8 +1,8 @@
 ## CS50 Project 4 Network
 
-Design a Twitter-like social network website for making posts and following users. 
-
 ### CS50 Network project [Demo Video](https://youtu.be/v7fKIZTdXX8)
+
+Design a Twitter-like social network website for making posts and following users. 
 
 ### Specification:
 
